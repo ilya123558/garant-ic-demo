@@ -1,0 +1,79 @@
+/*Стиль для Акции вверх (сервисных пакетов)*/
+
+.up_tema_subtitle_left {
+    text-align: left;
+    font-size: 30px;
+    color: #000000;
+    font-style: italic;
+}
+
+.up_tema_subtitle_right {
+    text-align: right;
+    font-size: 30px;
+    color: #000000;
+    font-style: italic;
+}
+
+.upadvantageinfo{
+    cursor: pointer;
+    margin: 20px 0 0 0;
+    padding: 15px;
+    text-align: center;
+    color: #4a69a6;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.upadvantageinfo:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.upadvantageoff{
+    display: none;
+}
+
+.upadvantageon{
+    display: block;
+}
+
+.upimg{
+    float: right;
+}
+
+.legaltech_button_order {
+    
+    width: 130px;
+    height: 60px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #4a69a6;
+    background: #ffffff;
+    border: 5px solid;
+    border-radius: 15px;
+    border-color: #4a69a6;
+    padding: 10px 15px 10px 15px;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.legaltech_button_order_small {
+    width: 30px;
+    height: 30px;    
+}
+
+.legaltech_button_order:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.legaltech_button_order:visited {
+    color: #ffffff;
+}

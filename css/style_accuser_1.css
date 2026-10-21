@@ -1,0 +1,143 @@
+/*Стиль для Сутяжника*/
+
+.tema {
+    font-size: 30px;
+    color: #4a69a6;
+    text-align: center;
+}
+
+.accuserinfo{
+    cursor: pointer;
+    padding: 15px;
+    color: #4a69a6;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.accuserinfo.wide{
+    position: relative;
+    background: #ffffff;
+    margin: 20px 0 0 0;
+    text-align: center;
+    color: #4a69a6;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.accuserinfo:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.accuserspoileroff{
+    display: none;
+}
+
+.accuserspoileron{
+    display: block;
+}
+
+.accuserinfoall{
+    margin: 20px 0 0 0;
+}
+
+.accuserinfoall li{
+    position: relative;
+    margin: 10px 0 0 50px;
+    padding-left: 20px;
+}
+
+.accuserinfoall li:before {
+    content: '✔';
+    position: absolute; top: 0; left: 0;
+    color: red;
+}
+
+.accuserinfoall ul ul li {
+    padding-left: 40px;
+}
+
+.accuserinfoall ul ul li:before {
+    content: '*';
+    position: absolute; top: 0; left: 0;
+    color: blue;
+    padding-left: 30px;
+}
+
+.bottom {
+    display: block;
+    margin: 20px 0 0 0;
+}
+
+.accuserorder {
+    display: block;
+    width: 300px;
+    cursor: pointer;
+    color: #ffffff;
+    background: #819CDD;
+    border-radius: 15px;
+    padding: 15px 15px;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {.accuserorder {font-size: 150%;}}
+@media (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {.accuserorder {font-size: 150%;}}
+
+.accuserorder:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.accuserorder:visited {
+    color: #ffffff;
+}
+
+.accusersale {
+    float: right;
+}
+
+.accuserorder_s {
+    display: block;
+    width: 300px;
+    cursor: pointer;
+    padding: 15px 15px;
+    color: #4a69a6;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {.accuserorder_s {font-size: 300%;}}
+@media (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {.accuserorder_s {font-size: 150%;}}
+
+.accuserorder_s:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.accuserorder_s:visited {
+    color: #ffffff;
+}
+
+
+
+.covid19 td {
+        width: 150px; 
+        border-collapse: collapse;
+        padding: 3px;
+        border: 1px solid black;
+        text-align: center;
+}

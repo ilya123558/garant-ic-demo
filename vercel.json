@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/form_2.php", "destination": "/api/form" },
+    { "source": "/price.php", "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
+  ]
+}

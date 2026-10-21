@@ -1,0 +1,632 @@
+/*Стиль для семинаров*/
+
+.tema {
+    font-size: 30px;
+    color: #4a69a6;
+    text-align: center;
+}
+
+.seminar {
+    
+    margin: 40px 0 0 0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px 10px #E1E5F0;/*рамка-тень*/
+}
+
+.top {
+    display: block;
+    height: 20px;
+}
+
+.top_with_info {
+    display: block;
+    height: 80px;
+}
+
+.up_button_order {
+    display: block;
+    float: right;
+    position: fixed;
+    z-index: 7;
+    margin: -10px -10px 0 0;
+    cursor: pointer;
+    color: #ffffff;
+    background: #4a69a6;
+    border-radius: 15px;
+    padding: 15px 15px;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+    
+.order {
+    display: block;
+    float: right;
+    position: relative;
+    z-index: 7;
+    margin: -10px -10px 0 0;
+    cursor: pointer;
+    color: #ffffff;
+    background: #4a69a6;
+    border-radius: 15px;
+    padding: 15px 15px;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.orderlink {
+    background: #909AB2;
+}
+
+.orderinfo {
+    display: block;
+    float: right;
+    position: relative;
+    margin: 40px -150px 0 0;
+    text-align: right;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {.order {font-size: 100%;}}
+@media (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {.order {font-size: 150%;}}
+
+.order:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.order:visited {
+    color: #ffffff;
+}
+
+.order_2 {
+    cursor: pointer;
+    color: #ffffff;
+    background: #4a69a6;
+    border-radius: 15px;
+    padding: 5px 5px;
+    font-size: 12px;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.order_2:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.order_2:visited {
+    color: #ffffff;
+}
+
+.order_3 {
+    display: block;
+    float: right;
+    position: relative;
+    z-index: 9999;
+    height: 90px;
+    margin: 55px 100px 0 0;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #4a69a6;
+    background: #ffffff;
+    border: 5px solid;
+    border-radius: 15px;
+    border-color: #4a69a6;
+    padding: 50px 15px 0 15px;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.order_3:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.order_3:visited {
+    color: #ffffff;
+}
+
+.order_4 {
+    position: relative;
+    height: 30px;
+    width: 100px;
+    margin: 0 0 0 20px;
+    padding: 5px 5px;
+    cursor: pointer;
+    color: #ffffff;
+    background: #4a69a6;
+    border-radius: 15px;
+    font-size: 12px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.order_4:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.order_4:visited {
+    color: #ffffff;
+}
+
+.seminartable {
+    border-collapse: separate;
+    border: 0px;
+    border-spacing: 10px 40px;
+}
+
+.seminarcontent{
+    position: relative;   
+}
+
+.seminarname {
+    font-size: 30px;
+    color: #4a69a6;
+}
+
+.seminar_title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.seminar_title.seminar_title_small {
+    font-weight: normal;
+}
+
+.seminar_title > .seminar_title_attention {
+    color: #4a69a6;
+}
+
+.seminarinfo{
+    cursor: pointer;
+    padding: 15px;
+    color: #819CDD;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+}
+
+.seminarinfo.small{
+    position: relative;
+    z-index: 999999;
+    background: #ffffff;
+    color: #4a69a6;
+    text-align: left;
+    margin: 20px 50% 0 0;
+    font-weight: bold;
+}
+
+.seminarinfo.small23{
+    position: relative;
+    z-index: 999999;
+    background: #ffffff;
+    color: #4a69a6;
+    text-align: left;
+    margin: 20px 40% 0 0;
+    font-weight: bold;
+}
+
+.seminarinfo.small234{
+    position: relative;
+    z-index: 999999;
+    background: #ffffff;
+    color: #4a69a6;
+    text-align: left;
+    margin: 20px 0 0 0;
+    font-weight: bold;
+}
+
+.seminarinfo.small_for_description{
+    position: relative;
+    z-index: 999999;
+    background: #ffffff;
+    color: #4a69a6;
+    text-align: left;
+    margin: 20px 30% 0 0;
+    font-weight: bold;
+}
+
+.seminarinfo.small_for_video{
+    position: relative;
+    z-index: 999999;
+    background: #ffffff;
+    color: #4a69a6;
+    text-align: center;
+    margin: 20px 0 0 60%;
+    font-weight: bold;
+}
+
+.seminarinfo.small_for_2{
+    position: relative;
+    z-index: 999999;
+    float: left;
+    width: 400px;
+    background: #ffffff;
+    color: #4a69a6;
+    text-align: center;
+    margin: 0 20px 0 20px;
+    font-weight: bold;
+}
+
+.seminarinfo.small_for_2.l_off{
+    z-index: 999998;
+    left: 100px;
+    background: #d3d3d3;
+}
+
+.seminarinfo.small_for_2.r_off{
+    z-index: 999998;
+    right: 100px;
+    background: #d3d3d3;
+}
+
+.seminarinfo.no_title{
+    text-transform: none;
+}
+
+.seminarinfo.wide{
+    position: relative;
+    z-index: 999999;
+    background: #ffffff;
+    margin: 20px 0 0 0;
+    text-align: center;
+    color: #4a69a6;
+    font-weight: bold;
+}
+
+.wide_click_counter{
+    
+}
+
+.seminarinfo_attention{
+    color: #dd4b39;
+}
+
+.legaltechppk_li li{
+    margin: 0 0 0 30px;
+}
+
+
+.seminarinfo:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.seminarinfo_off{
+    cursor: pointer;
+    padding: 10px;
+    color: #4a69a6;
+    background: #ffffff;
+    font-weight: bold;
+    margin: 0 30% 0 30%;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.seminarinfo_off:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.20), 0 4px 15px 0 rgba(0, 0, 0, 0.17)
+}
+
+.seminarinfo_on{
+    cursor: pointer;
+    padding: 10px;
+    color: #4a69a6;
+    background: #ffffff;
+    font-weight: bold;
+    margin: 0 30% 0 30%;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.seminarinfo_on:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.20), 0 4px 15px 0 rgba(0, 0, 0, 0.17)
+}
+
+.seminarinfo_bottom2{
+    cursor: pointer;
+    padding: 5px;
+    color: red;
+    font-size: 35px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.seminarinfo_bottom2:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.20), 0 4px 19px 0 rgba(0, 0, 0, 0.17)
+}
+
+.seminarinfo_bottom3{
+    padding: 5px;
+    color: red;
+    font-size: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.seminarinfo_bottom4{
+    padding: 5px;
+    color: red;
+    font-size: 35px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.seminarinfo_bottom5{
+    margin-left: 20px;
+    color: red;
+    font-size: 10px;
+    text-align: right;
+}
+
+.seminarinfoall{
+    margin: 20px 0 0 0;
+}
+
+.seminarinfoall li{
+    margin: 10px 0 0 50px;
+    list-style-type: none; /* Убираем исходную нумерацию */
+}
+
+.seminarinfoall ol{
+    counter-reset: list1; /* Инициируем счетчик */
+}
+
+.seminarinfoall ol li:before{
+    counter-increment: list1; /* Увеличиваем значение счетчика */
+    content: counter(list1) ". "; /* Выводим значение */
+}
+
+.seminarinfoall ol ol{
+    counter-reset: list2; /* Инициируем счетчик вложенного списка */
+}
+
+.seminarinfoall ol ol li:before{
+    counter-increment: list2; /* Увеличиваем значение счетчика */
+    content: counter(list1) "." counter(list2) ". "; /* Выводим значение типа 2.1, 2.2,... */
+}
+
+
+
+.seminarspoileroff{
+    display: none;
+}
+
+.seminarspoileron{
+    display: block;
+}
+
+/*
+.seminarspoileron > p{
+    margin: 15px 0 0 0;
+}
+
+.seminarspoileron.framing {
+    margin: 0 0 0 0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: inset 0 -10px 10px 6px #E1E5F0;
+}
+*/
+
+.seminarspoileron.framing {
+    position: relative;
+    z-index: 888888;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #4a69a6;
+    padding: 30px 10px 10px 10px;
+    margin: -20px 0 0 0;
+}
+
+
+.speakers_list {
+    list-style-type: disc;
+}
+
+.pentagon {
+    display: block;
+    float: right;    
+    position: relative;
+    z-index: 99999;
+    margin: 45px -180px 0 0;
+    width: 54px;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: red transparent;
+}
+.pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent red;
+}
+.pentagontxt {
+    display: block;
+    float: right;
+    position: relative;
+    width: 70px;
+    margin: 40px -170px 0 0;
+    z-index: 999999;
+    color: #ffffff;
+    font-size: 80%;
+    text-align: center;
+}
+
+.angle {
+  display: block;
+  position: relative;
+  width: 0;
+  height: 0;
+  margin: 20px 0 -120px -10px;
+  border: 50px solid;
+  border-color: red transparent transparent red;
+  border-radius: 10px;
+}
+
+.angletxt {
+  display: block;
+  position: relative;
+  width: 70px;
+  margin: 0 0 -40px 0;
+  z-index: 999999;
+  color: #ffffff;
+  font-size: 80%;
+  text-align: center;
+}
+
+.kompl td {
+    padding: 15px;
+}
+
+.ul_mark {
+    margin-left: 30px;
+}
+
+.ul_mark li:before {
+    content: "\2713";
+    /*content: '✔';*/
+    color: #4a69a6;
+    padding-right: 10px;
+}
+
+.seminar_link {
+    display: block;
+    cursor: pointer;
+    color: #ffffff;
+    background: #4a69a6;
+    margin: 15px 0 15px 0;
+    border-radius: 15px;
+    padding: 15px 15px;
+    text-align: justify;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.seminar_link:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.seminar_link:visited {
+    color: #ffffff;
+}
+    
+.seminar_link.small {
+    width: 300px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.seminar_link.inverted {
+    background: #ffffff;
+    color: #4a69a6;
+    border: 5px solid;
+    border-radius: 15px;
+    border-color: #4a69a6;
+}
+
+.seminar_link.exchange_rate_dynamics {
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.place_for_description_and_order_button_clear{
+    clear: both;
+}
+
+.place_for_description{
+    width: 800px;
+    float: left;
+}
+
+.place_for_description_small{
+    width: 900px;
+}
+
+
+.place_for_order_button{
+    position: relative;
+    float: left;    
+}
+
+.place_for_order_button_small{
+    margin-top: 47px;
+}
+
+.aside {
+text-align: center; 
+}
+
+.sticky {
+  position: fixed;
+  z-index: 1111111;
+}
+
+.stop {
+  position: relative;
+  z-index: 1111111;
+}
+ 
+.block_description_2 {
+    margin: 0 0 0 20px;  
+}
+
+.ppk_price td {
+    border: 2px solid #333;
+    
+}
+
+.orderline247 {
+    margin-top: 15px;
+    padding: 5px 10px 0 10px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.16);
+    font-weight: bold;
+}

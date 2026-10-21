@@ -1,0 +1,256 @@
+/* Страница price.php: инфоблок «Получить расчёт», блок «Подобрать комплект», модальное окно */
+
+/* Мобильная ширина страницы: широкие таблицы (min-width 860px) раздвигали всю страницу до ~910px,
+   и на телефоне она прокручивалась вбок целиком. contain: inline-size не даёт таблицам задавать
+   ширину страницы — они прокручиваются внутри своих .table-container, как и задумано. */
+.container {
+    width: 100%;
+    contain: inline-size;
+}
+
+/* Кнопки — цвета шапки сайта (.btn-header-blue / .btn-header-yellow) */
+.calc-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+.calc-btn:active { transform: translateY(1px); }
+.calc-btn:focus-visible { outline: 3px solid #07a6e6; outline-offset: 2px; }
+.calc-btn-blue,
+.calc-btn-blue:visited { background-color: #4a69a6; color: #ffffff; }
+.calc-btn-blue:hover { background-color: #2a5298; color: #ffffff; text-decoration: none; }
+.calc-btn-yellow,
+.calc-btn-yellow:visited { background-color: #ffff00; color: #4a69a6; }
+.calc-btn-yellow:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.25); color: #1e3c72; text-decoration: none; }
+.calc-btn[disabled] { opacity: 0.6; cursor: default; }
+
+/* Инфоблок перед прайс-листом */
+.calc-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 18px 22px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #ffffff;
+}
+.calc-info-title {
+    margin: 0 0 4px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.calc-info-desc {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+.calc-info .calc-btn { flex-shrink: 0; }
+
+/* Блок «Подобрать комплект» у таблицы универсальной линейки.
+   До 1400px — полоса над таблицей; шире — колонка слева от таблицы (на свободном поле страницы,
+   чтобы не сжимать саму таблицу). */
+.calc-uni { position: relative; }
+.calc-pick { margin-bottom: 12px; }
+.calc-pick-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    background-color: #f1f5fd;
+    border: 1px solid #e1e5eb;
+}
+.calc-pick-content { min-width: 0; }
+.calc-pick-title {
+    margin: 0 0 3px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1e3c72;
+}
+.calc-pick-text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #333333;
+}
+.calc-pick-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 5px;
+}
+.calc-pick .calc-btn { font-size: 14px; padding: 9px 22px; }
+.calc-pick-link,
+.calc-pick-link:visited {
+    font-size: 12px;
+    line-height: 1.3;
+    color: #2a5298;
+    text-decoration: underline;
+}
+.calc-pick-link:hover { color: #1e3c72; }
+
+@media (min-width: 1400px) {
+    .calc-pick {
+        position: absolute;
+        top: 0;
+        bottom: 20px;
+        right: 100%;
+        width: 200px;
+        margin: 0 28px 0 0;
+    }
+    .calc-pick-inner {
+        position: sticky;
+        top: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 14px;
+        padding: 18px 15px;
+        background: #ffffff;
+        border: none;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .calc-pick-title { font-size: 16px; margin-bottom: 6px; }
+    .calc-pick-actions { align-items: stretch; gap: 8px; }
+    .calc-pick .calc-btn { white-space: normal; padding: 9px 12px; }
+}
+
+/* Модальное окно */
+html.calc-lock,
+html.calc-lock body { overflow: hidden; }
+.calc-modal[hidden] { display: none; }
+.calc-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+}
+.calc-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 30, 56, 0.6);
+}
+.calc-modal-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    animation: calc-in 0.2s ease-out;
+}
+@keyframes calc-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+}
+.calc-modal-body { padding: 26px 26px 22px; }
+.calc-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: #6c757d;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+.calc-modal-close:hover { color: #1e3c72; }
+.calc-modal-title {
+    margin: 0 30px 6px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e3c72;
+}
+.calc-modal-lead {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.calc-field { margin-bottom: 12px; }
+.calc-field label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #444444;
+}
+.calc-req { color: red; }
+.calc-field input {
+    display: block;
+    width: 100%;
+    padding: 8px 9px;
+    border: 2px solid #cfcfcf;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    color: #444444;
+    background: #ffffff;
+}
+.calc-field input:focus { outline: none; border-color: #07a6e6; }
+.calc-field.invalid input { border-color: #e04040; }
+.calc-error {
+    display: block;
+    min-height: 16px;
+    margin-top: 2px;
+    font-size: 12px;
+    color: #e04040;
+}
+.calc-form-note {
+    margin: 4px 0 14px;
+    font-size: 12px;
+    line-height: 1.35;
+    color: #6c757d;
+}
+.calc-form-submit { width: 100%; }
+.calc-form-fail {
+    margin: 10px 0 0;
+    font-size: 13px;
+    color: #e04040;
+}
+.calc-success { text-align: center; padding: 10px 0 4px; }
+.calc-success .calc-modal-title { margin-right: 0; }
+
+@media (max-width: 600px) {
+    .calc-info,
+    .calc-pick-inner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .calc-pick-inner { gap: 12px; padding: 14px 16px; }
+    .calc-pick-actions { align-items: stretch; gap: 8px; }
+    .calc-info { padding: 16px; gap: 14px; }
+    .calc-info-title { font-size: 16px; }
+    .calc-btn { white-space: normal; }
+    .calc-modal { padding: 10px; }
+    .calc-modal-body { padding: 22px 18px 18px; }
+}
